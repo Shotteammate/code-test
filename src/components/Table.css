@@ -2,6 +2,7 @@
   width: 80%;
   height: fit-content;
   margin-top: 8rem;
+  background-color: aliceblue;
 }
 
 .table-container table {
@@ -23,7 +24,9 @@
 
 table,
 thead,
+th,
 td {
   border: solid 1px grey;
   border-collapse: collapse;
+  padding: 0.5rem;
 }

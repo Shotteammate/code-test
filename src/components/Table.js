@@ -11,7 +11,9 @@ const Table = ({ rows }) => {
         <thead>
           <tr>
             {tableHeader?.map(({ name, id }) => (
-              <th className={`column-${id}`}>{name}</th>
+              <th key={`column-${id}`} className={`column-${id}`}>
+                {name}
+              </th>
             ))}
           </tr>
         </thead>
