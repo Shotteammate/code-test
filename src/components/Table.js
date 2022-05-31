@@ -1,8 +1,9 @@
 import React from "react";
 import "./Table.css";
 import TableRow from "./TableRow";
+import { TABLE_LEVEL } from "../assets/constants/constants";
 
-const Table = ({ states, distracts, townships }) => {
+const Table = ({ rows }) => {
   return (
     <div className="table-container">
       <table>
@@ -13,13 +14,8 @@ const Table = ({ states, distracts, townships }) => {
           <th className="column-3">Column3</th>
         </tr>
         <tbody>
-          {states.map((state) => (
-            <TableRow
-              key={state.stateId}
-              state={state}
-              distracts={distracts}
-              townships={townships}
-            />
+          {rows?.map((state) => (
+            <TableRow key={state.id} data={state} level={TABLE_LEVEL} />
           ))}
         </tbody>
       </table>

@@ -3,16 +3,37 @@ import "./App.css";
 import Table from "./components/Table";
 import { tableData } from "./assets/constants/data";
 import Navbar from "./components/Navbar";
+import { simpleDeepClone } from "./utils/commonUtils";
 
 function App() {
-  const states = useMemo(() => tableData?.states, []);
-  const distracts = useMemo(() => tableData?.distracts, []);
-  const townships = useMemo(() => tableData?.townships, []);
+  const rows = useMemo(() => {
+    const states = simpleDeepClone(tableData?.states) ?? [];
+    const distracts = simpleDeepClone(tableData?.distracts) ?? [];
+    const townships = simpleDeepClone(tableData?.townships) ?? [];
+
+    distracts.forEach((distract) => {
+      if (distract?.children?.length > 0) {
+        distract.children = townships.filter((township) =>
+          distract.children.includes(township.id)
+        );
+      }
+    });
+
+    states.forEach((state) => {
+      if (state?.children?.length > 0) {
+        state.children = distracts.filter((distract) =>
+          state.children.includes(distract.id)
+        );
+      }
+    });
+
+    return states;
+  }, []);
 
   return (
     <div className="App">
       <Navbar />
-      <Table states={states} distracts={distracts} townships={townships} />
+      <Table rows={rows} />
     </div>
   );
 }

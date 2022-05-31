@@ -3,15 +3,18 @@ import HomeIcon from "@mui/icons-material/Home";
 import "./index.css";
 
 const Navbar = () => {
-  const navigationLinks = ["About", "Contact Us"];
+  const navigationLinks = [
+    { id: 1, name: "About" },
+    { id: 2, name: "Contact Us" },
+  ];
   return (
     <div className="container">
       <div className="navbar">
         <HomeIcon className="logo" />
         <nav>
           <ul>
-            {navigationLinks.map((link) => (
-              <li>{link}</li>
+            {navigationLinks.map(({ id, name }) => (
+              <li key={id}>{name}</li>
             ))}
           </ul>
         </nav>

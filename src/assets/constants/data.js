@@ -1,4 +1,6 @@
-const columnData = ["col1", "col2", "col3"];
+const getColumnData = (id) => {
+  return [`${id}-col1`, `${id}-col2`, `${id}-col3`];
+};
 
 export const tableData = {
   states: [
@@ -6,19 +8,19 @@ export const tableData = {
       id: "stateId1",
       name: "state1",
       children: ["distractId1", "distractId2"],
-      columnData,
+      columnData: getColumnData("stateId1"),
     },
     {
       id: "stateId2",
       name: "state2",
       children: [],
-      columnData,
+      columnData: getColumnData("stateId2"),
     },
     {
       id: "stateId3",
       name: "state3",
       children: ["distractId3"],
-      columnData,
+      columnData: getColumnData("stateId3"),
     },
   ],
   distracts: [
@@ -26,19 +28,19 @@ export const tableData = {
       id: "distractId1",
       name: "distractId1",
       children: ["township1", "township2"],
-      columnData,
+      columnData: getColumnData("distractId1"),
     },
     {
       id: "distractId2",
       name: "distractId2",
       children: ["township3"],
-      columnData,
+      columnData: getColumnData("distractId2"),
     },
     {
       id: "distractId3",
       name: "distractId3",
       children: ["township4"],
-      columnData,
+      columnData: getColumnData("distractId3"),
     },
   ],
   townships: [
@@ -46,25 +48,25 @@ export const tableData = {
       id: "township1",
       name: "township1",
       children: [],
-      columnData,
+      columnData: getColumnData("township1"),
     },
     {
       id: "township2",
       name: "township2",
       children: [],
-      columnData,
+      columnData: getColumnData("township2"),
     },
     {
       id: "township3",
       name: "township3",
       children: [],
-      columnData,
+      columnData: getColumnData("township3"),
     },
     {
       id: "township4",
       name: "township4",
       children: [],
-      columnData,
+      columnData: getColumnData("township4"),
     },
   ],
 };

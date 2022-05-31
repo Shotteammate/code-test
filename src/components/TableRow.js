@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import ChildRow from "./ChildRow";
+import "./TableRow.css";
 
-const TableRow = ({ state, distracts, townships }) => {
+// const TableRow = ({ state, distracts, townships }) => {
+const TableRow = ({ data, level }) => {
   const [isExpand, setIsExpand] = useState(false);
-  const isChildren = state?.children?.length > 0;
+  const { name, columnData, children } = data;
+  const isChildren = children?.length > 0;
   const toggleExpand = () => {
     setIsExpand((prevState) => !prevState);
   };
@@ -12,21 +14,21 @@ const TableRow = ({ state, distracts, townships }) => {
     <>
       <tr>
         <td>
-          {state?.name}
+          <span style={{ marginLeft: `${level * 1}rem` }}>{name}</span>
           {isChildren && (
-            <button onClick={toggleExpand}>{isExpand ? "-" : "+"}</button>
+            <button className="expand-btn" onClick={toggleExpand}>
+              {isExpand ? "-" : "+"}
+            </button>
           )}
         </td>
-        {state?.columnData.map((col) => (
+        {columnData.map((col) => (
           <td>{col}</td>
         ))}
       </tr>
       {isExpand &&
         isChildren &&
-        state?.children?.map((distractId) => {
-          const child = distracts.filter((item) => item.id === distractId)?.[0];
-
-          return <ChildRow distract={child} townships={townships} />;
+        children?.map((child) => {
+          return <TableRow key={child.id} data={child} level={level + 1} />;
         })}
     </>
   );
