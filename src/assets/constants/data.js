@@ -70,3 +70,10 @@ export const tableData = {
     },
   ],
 };
+
+export const tableHeader = [
+  { id: 0, name: "Column 0" },
+  { id: 1, name: "Column 1" },
+  { id: 2, name: "Column 2" },
+  { id: 3, name: "Column 3" },
+];

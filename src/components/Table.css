@@ -1,6 +1,6 @@
 .table-container {
-  background-color: aquamarine;
   width: 80%;
+  height: fit-content;
   margin-top: 8rem;
 }
 
@@ -19,4 +19,11 @@
 }
 .column-3 {
   width: 20%;
+}
+
+table,
+thead,
+td {
+  border: solid 1px grey;
+  border-collapse: collapse;
 }

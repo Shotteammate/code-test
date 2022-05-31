@@ -22,7 +22,7 @@ const TableRow = ({ data, level }) => {
           )}
         </td>
         {columnData.map((col) => (
-          <td>{col}</td>
+          <td key={col}>{col}</td>
         ))}
       </tr>
       {isExpand &&

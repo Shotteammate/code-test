@@ -8,7 +8,7 @@ const Navbar = () => {
     { id: 2, name: "Contact Us" },
   ];
   return (
-    <div className="container">
+    <div className="navbar-container">
       <div className="navbar">
         <HomeIcon className="logo" />
         <nav>
