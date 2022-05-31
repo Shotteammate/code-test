@@ -1,0 +1,21 @@
+.table-container {
+  background-color: aquamarine;
+  width: 80%;
+}
+
+.table-container table {
+  width: 100%;
+}
+
+.column-0 {
+  width: 40%;
+}
+.column-1 {
+  width: 20%;
+}
+.column-2 {
+  width: 20%;
+}
+.column-3 {
+  width: 20%;
+}
