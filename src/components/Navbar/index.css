@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  background-color: bisque;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.logo {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  max-width: 2.5rem !important;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
