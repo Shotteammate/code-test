@@ -18,9 +18,17 @@ const Table = ({ rows }) => {
           </tr>
         </thead>
         <tbody>
-          {rows?.map((state) => (
-            <TableRow key={state.id} data={state} level={TABLE_LEVEL} />
-          ))}
+          {rows?.length > 0 ? (
+            rows.map((state) => (
+              <TableRow key={state.id} data={state} level={TABLE_LEVEL} />
+            ))
+          ) : (
+            <tr colSpan="4">
+              <td className="empty-row" colSpan="4">
+                No row found.
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>

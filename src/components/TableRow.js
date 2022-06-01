@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./TableRow.css";
 
-// const TableRow = ({ state, distracts, townships }) => {
 const TableRow = ({ data, level }) => {
   const [isExpand, setIsExpand] = useState(false);
   const { name, columnData, children } = data;

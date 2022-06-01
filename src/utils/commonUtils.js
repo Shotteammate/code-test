@@ -6,3 +6,7 @@ export const simpleDeepClone = (data) => {
     console.log("Deep clone error, there may be circular reference:", error);
   }
 };
+
+export const isEmpty = (obj) => {
+  return Object.keys(obj).length === 0;
+};

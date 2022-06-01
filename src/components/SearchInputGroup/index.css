@@ -1,0 +1,18 @@
+.search-group-container {
+  width: 80%;
+  margin-top: 8rem;
+  background-color: aliceblue;
+  border: solid 1px #bdbdbd;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem 1rem 0 0;
+}
+.search-group {
+  padding: 0.5rem;
+}
+
+.reset-btn {
+  margin: 0.5rem !important;
+}
