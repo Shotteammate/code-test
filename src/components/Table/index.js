@@ -1,8 +1,8 @@
 import React from "react";
-import "./Table.css";
+import "./index.css";
 import TableRow from "./TableRow";
-import { TABLE_LEVEL } from "../assets/constants/constants";
-import { tableHeader } from "../assets/constants/data";
+import { TABLE_LEVEL } from "../../assets/constants/constants";
+import { tableHeader } from "../../assets/constants/data";
 
 const Table = ({ rows }) => {
   return (
