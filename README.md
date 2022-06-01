@@ -38,12 +38,12 @@ Run project in local by typing below command
 - Custom Hooks
 
   - Custom hooks are created such useTableData as reasons below:
-    1. Easier to write unit test
-    - Extracting the hooks with different data sets to test logic is easier than rendering a component and then test.
-    - Testing the logic in hooks is faster.
-    2. Abstraction (OOP)
-    - Showing essential and hiding details help developers to understand the component and to be distracted by complex logic.
-    - Code splitting which also keeps file small and easier to read
+    - Easier to write unit test
+      - Extracting the hooks with different data sets to test logic is easier than rendering a component and then test.
+      - Testing the logic in hooks is faster.
+    - Abstraction (OOP)
+      - Showing essential and hiding details help developers to understand the component and to be distracted by complex logic.
+      - Code splitting which also keeps file small and easier to read
 
 - Utils
 
