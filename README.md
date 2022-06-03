@@ -17,7 +17,7 @@ Run project in local by typing below command
 - Collapsible table
   - The table can be expanded if the row contains children.
 - Table filter
-  - The search input can filter by state, distract, township and their corresponding columns value after typing input and click the search button.
+  - The search input can filter by state, district, township and their corresponding columns value after typing input and click the search button.
 - Reset button
   - It provides another way to reset the filter instead of searching with empty string.
 

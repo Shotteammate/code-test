@@ -7,7 +7,7 @@ export const tableData = {
     {
       id: "stateId1",
       name: "state1",
-      children: ["distractId1", "distractId2"],
+      children: ["districtId1", "districtId2"],
       columnData: getColumnData("stateId1"),
     },
     {
@@ -19,28 +19,28 @@ export const tableData = {
     {
       id: "stateId3",
       name: "state3",
-      children: ["distractId3"],
+      children: ["districtId3"],
       columnData: getColumnData("stateId3"),
     },
   ],
-  distracts: [
+  districts: [
     {
-      id: "distractId1",
-      name: "distractId1",
+      id: "districtId1",
+      name: "districtId1",
       children: ["township1", "township2"],
-      columnData: getColumnData("distractId1"),
+      columnData: getColumnData("districtId1"),
     },
     {
-      id: "distractId2",
-      name: "distractId2",
+      id: "districtId2",
+      name: "districtId2",
       children: ["township3"],
-      columnData: getColumnData("distractId2"),
+      columnData: getColumnData("districtId2"),
     },
     {
-      id: "distractId3",
-      name: "distractId3",
+      id: "districtId3",
+      name: "districtId3",
       children: ["township4"],
-      columnData: getColumnData("distractId3"),
+      columnData: getColumnData("districtId3"),
     },
   ],
   townships: [
